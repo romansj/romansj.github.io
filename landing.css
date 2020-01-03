@@ -25,6 +25,30 @@ header {
   min-height: 700px;
 }
 
+header#about_header{  position: relative;
+  width: 100%;
+  display: block;
+  background:
+    linear-gradient(rgba(14, 2, 35, 0.5), rgba(14, 2, 35, 0.5)),
+    url("images/programmer.jpg");  background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+      min-height: 700px;
+}
+
+header#legal_header{ position: relative;
+  width: 100%;
+  display: block;
+  background:
+    linear-gradient(rgba(14, 2, 35, 0.5), rgba(14, 2, 35, 0.5)),
+    url("images/writing.jpg");  background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+      min-height: 700px;
+}
+
 #navbar {
   z-index: 999;
   position: fixed;
@@ -84,7 +108,7 @@ nav#top-menu li a img {
   text-align: left;
   position: absolute;
   bottom: 30px;
-  left: 80px;
+  left: 60px;
 }
 
 .title h1 {
@@ -131,8 +155,8 @@ div#page_content section h4 {
 @media screen and (max-width: 700px) {
   .content_div {
     flex-direction: column;
-    background-color: lightgreen;
-    text-align: center;
+    /* background-color: lightgreen; */
+    /* text-align: center; */
   }
 
   #swipe_actions_container {
@@ -153,6 +177,14 @@ div#page_content section h4 {
     cursor: pointer;
   }
 
+  .title{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+  }
+
 
 }
 
@@ -163,8 +195,8 @@ div#page_content section h4 {
 }
 
 #community {
-  margin-left: 80px;
-  margin-right: 80px;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 #swipe_actions_container {
@@ -278,8 +310,8 @@ footer li a:hover {
 }
 
 section {
-  margin-left: 80px;
-  margin-right: 80px;
+  margin-left: 60px;
+  margin-right: 60px;
   margin-top: 60px;
 }
 
