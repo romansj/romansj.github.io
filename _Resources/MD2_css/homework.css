@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+html {
+  min-width: 1500px;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: relative;
+  margin-top: -20px;
+  width: 100%;
+  display: block;
+  background:
+    linear-gradient(rgba(14, 2, 35, 0.5), rgba(14, 2, 35, 0.5)),
+    url("images/topimage.jpeg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  min-height: 650px;
+}
+
+.title {
+  text-align: right;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.title h1 {
+  text-align: right;
+  font-size: 72px;
+}
+
+.title span:not(.info) {
+  font-size: 28px;
+}
+
+.social {
+  padding-top: 100px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.social h5 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+}
+
+/* social icons */
+a img {
+  padding-left: 10px;
+  opacity: 60%;
+  width: 20px;
+  height: 20px;
+}
+
+a img:hover {
+  opacity: 100%;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+nav {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  display: block;
+  z-index: 2;
+}
+
+nav#top-menu li {
+  padding: 0 16px 0 16px;
+}
+
+nav#top-menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav#top-menu li a:hover {
+  color: rgb(242, 177, 26);
+}
+
+nav#top-menu .right a:hover {
+  color: white;
+}
+
+.parent-menu {
+  padding: 25px 30px 25px 30px;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(rgba(14, 2, 35, 0.8), rgba(14, 2, 35, 0.8));
+}
+
+li.active {
+  color: rgb(242, 177, 26);
+}
+
+.upper-menu {
+  font-size: 1.2em;
+  float: left;
+}
+
+.right {
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.sub-menu {
+  margin-left: -16px;
+  z-index: 1;
+  display: none;
+  position: absolute;
+  background: linear-gradient(rgba(14, 7, 37, 0.9), rgba(14, 7, 37, 0.9));
+}
+
+.sub-menu li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sub-menu li a {
+  text-align: left;
+  font-size: 0.9em;
+  padding: 16px 0 16px 0;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.sub-menu-caption:hover .sub-menu {
+  display: block;
+}
+
+.expand {
+  display: inline-block;
+}
+
+section#summary p {
+  color: rgb(132, 132, 132);
+  font-size: 18px;
+  text-align: left;
+  margin: 0 80px 0 80px;
+}
+
+section#summary p.add span {
+  font-size: 1.5em;
+}
+
+span {
+  display: inline-block;
+  position: relative;
+  margin: 10px;
+}
+
+/* aktieru bildes */
+#cast {
+  padding: 50px 0;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(rgba(14, 7, 37, 0.9), rgba(14, 7, 37, 0.9)),
+    url("images/car.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 1200px;
+}
+
+div.cast-info-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+div.cast-info-cell {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  position: relative;
+}
+
+div.cast-info-cell:hover .cast-text {
+  background-color: rgb(242, 213, 26);
+  color: white;
+}
+
+div.cast-info-cell:hover .cast-text a {
+  color: white;
+}
+
+div.cast-info-cell:hover .cast-head {
+  background-color: rgba(242, 213, 26, 1);
+}
+
+div.cast-info {
+  height: 100%;
+}
+
+div.cast-info img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* dzeltanais kvadrats */
+div.cast-head {
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  vertical-align: top;
+  float: left;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  background-color: rgba(242, 213, 26, 0.8);
+}
+
+div.cast-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  line-height: 35px;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* aktiera vards */
+div.cast-text a {
+  text-transform: uppercase;
+  color: rgb(42, 42, 42);
+  font-size: 18px;
+  text-decoration: none;
+}
+
+div.cast-text p {
+  text-transform: uppercase;
+  color: rgb(132, 132, 132);
+  font-size: 14px;
+  margin: 0;
+}
+
+.btn {
+  background-color: rgba(242, 213, 26, 0.8);
+  border-radius: 32px;
+  padding: 2px 10px 2px 10px;
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+}
+
+.btn:hover {
+  background-color: rgba(242, 213, 26, 1);
+}
+
+/* t r b l */
+.btn-l {
+  padding: 10px 20px 10px 20px;
+  min-height: 50px;
+}
+
+section#trailer p a {
+  text-decoration: none;
+  font-size: 18px;
+  color: rgb(132, 132, 132);
+}
+
+iframe {
+  border: 0;
+  width: 900px;
+  height: 506px;
+}
+
+/* tickets and footer */
+section#tickets {
+  padding: 50px 0;
+  min-height: 100px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    url("images/cinema.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer ul {
+  font-size: 0.8em;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+footer {
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+footer li {
+  padding: 10px;
+  float: left;
+  border-right: 1px solid rgb(181, 181, 181);
+}
+
+footer li:last-child {
+  border-right: none;
+}
+
+footer li a {
+  color: rgb(136, 136, 136);
+  text-decoration: none;
+}
+
+footer li a:hover {
+  color: rgb(242, 213, 26);
+}
+
+/* main settings  */
+.upper {
+  text-transform: uppercase;
+}
+
+section {
+  margin-top: 60px;
+}
+
+h2 {
+  margin-top: 60px;
+  font-size: 42px;
+}
+
+h4 {
+  font-size: 24px;
+  color: white;
+}
+
+.line {
+  display: block;
+  position: relative;
+  border-top: 2px solid white;
+  width: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+}
+
+.text-center {
+  text-align: center;
+}
