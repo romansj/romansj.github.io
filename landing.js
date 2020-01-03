@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var iconItem = document.getElementById("icon_item");
 
   iconItem.addEventListener("click", function() {
-    hideShowMenu();
+    if (document.body.clientWidth < 700) hideShowMenu();
   });
 
   // if (document.body.clientWidth <= 700) {

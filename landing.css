@@ -30,6 +30,7 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
+  box-shadow: 1px 1px 5px #888888;
 }
 
 nav#top-menu li {
@@ -94,11 +95,11 @@ nav#top-menu li a img {
   color: white;
 }
 
-h3 {
+div#page_content h3 {
   font-size: 40px;
 }
 
-section h4 {
+div#page_content section h4 {
   font-size: 30px;
 }
 
@@ -135,7 +136,8 @@ section h4 {
   }
 
   #swipe_actions_container {
-    align-items: center;
+    flex-direction: column;
+    /* align-items: center; */
   }
 
   .parent-menu {
@@ -196,7 +198,7 @@ section h4 {
   width: 60px;
 }
 
-ul {
+div#page_content ul {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
