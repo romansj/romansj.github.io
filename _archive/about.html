@@ -59,7 +59,7 @@
           <div class="social-btns" style="display:flex; align-items:center; justify-content:center;">
             <div><a style="text-decoration: none;  display:flex; flex-direction:column;" href="https://play.google.com/store/apps/details?id=com.cherrydev.silenttime"><img src="images/silent_time.png" alt="Silent Time">Silent<br>Time</a></div>
             <p style="text-align:left; margin-left: 15px; max-width:500px;">Silent Time makes sure your phone stays quiet when you need it to, be it at work - in a meeting, school - during class or when you're walking outside.
-               Silent Time makes sure you're not disturbed wherever you are.</p>
+              Silent Time makes sure you're not disturbed wherever you are.</p>
           </div>
         </div>
 
@@ -73,6 +73,168 @@
       </div>
 
       <h1>😁 Under construction 😁</h1>
+      <form id="form" action="/my-handling-form-page" method="post">
+        <ul>
+          <li>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name" />
+          </li>
+          <li>
+            <label for="mail">E-mail:</label>
+            <input type="email" id="mail" name="user_email" />
+          </li>
+          <li>
+            <label for="msg">Message:</label>
+            <textarea id="msg" name="user_message"></textarea>
+          </li>
+          <li class="button">
+            <button type="submit">Send your message</button>
+          </li>
+        </ul>
+
+      </form>
+
+      <style>
+        form {
+          /* Center the form on the page */
+          margin: 0 auto;
+          width: 400px;
+          /* Form outline */
+          padding: 1em;
+          border: 1px solid #CCC;
+          border-radius: 1em;
+        }
+
+        form ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        form li+li {
+          margin-top: 1em;
+        }
+
+        label {
+          /* Uniform size & alignment */
+          display: inline-block;
+          width: 90px;
+          text-align: right;
+        }
+
+        input,
+        textarea {
+          /* To make sure that all text fields have the same font settings
+           By default, textareas have a monospace font */
+          font: 1em sans-serif;
+
+          /* Uniform text field size */
+          width: 300px;
+          box-sizing: border-box;
+
+          /* Match form field borders */
+          border: 1px solid #999;
+        }
+
+        input:focus,
+        textarea:focus {
+          /* Additional highlight for focused elements */
+          border-color: #000;
+        }
+
+        textarea {
+          /* Align multiline text fields with their labels */
+          vertical-align: top;
+
+          /* Provide space to type some text */
+          height: 5em;
+        }
+
+        .button {
+          /* Align buttons with the text fields */
+          /* padding-left: 90px; */
+          /* same size as the label elements */
+        }
+
+
+
+        button {
+          /* This extra margin represent roughly the same space as the space
+                   between the labels and their text fields */
+          margin-left: .5em;
+
+          display: inline-block;
+          border: none;
+          padding: 1rem 2rem;
+          margin: 0;
+          text-decoration: none;
+          background: #ef6c00;
+          color: #ffffff;
+          font-family: sans-serif;
+          font-size: 1rem;
+          cursor: pointer;
+          text-align: center;
+          transition: background 250ms ease-in-out,
+            transform 150ms ease;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+        }
+
+        button:hover,
+        button:focus {
+          background: #c25700;
+        }
+
+        button:focus {
+          /* outline: 1px solid #fff;
+            outline-offset: -4px; */
+        }
+
+        button:active {
+          transform: scale(0.95);
+        }
+
+        input[type=email] {
+          -webkit-appearance: none;
+
+          /* width: 100%; */
+          border: 1px solid #333;
+          margin: 0;
+
+          font-family: inherit;
+          font-size: 90%;
+
+          box-sizing: border-box;
+        }
+
+        /* This is our style for the invalid fields */
+        input:invalid {
+          border-color: #900;
+          background-color: #FDD;
+        }
+
+        input:focus:invalid {
+          outline: none;
+        }
+
+        /* This is the style of our error messages */
+        .error {
+          width: 100%;
+          padding: 0;
+
+          font-size: 80%;
+          color: white;
+          background-color: #900;
+          border-radius: 0 0 5px 5px;
+
+          box-sizing: border-box;
+        }
+
+        .error.active {
+          padding: 0.3em;
+        }
+      </style>
+
 
     </section>
 

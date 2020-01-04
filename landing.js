@@ -7,15 +7,21 @@ document.addEventListener("DOMContentLoaded", function() {
     if (document.body.clientWidth < 700) hideShowMenu();
   });
 
-  // if (document.body.clientWidth <= 700) {
-  //   if (visible) {
-  //     hideShowMenu();
-  //   }
-  // }
+  var textItem = document.getElementsByClassName("menu-text");
+
+  for (i = 0; i < textItem.length; i++) {
+    textItem[i].addEventListener("click", function() {
+      if (document.body.clientWidth < 700) {
+        if (visible) {
+          hideShowMenu();
+        }
+      };
+    });
+  }
 
 
   window.addEventListener("resize", function(event) {
-    console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight + ' high');
+    //console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight + ' high');
     if (document.body.clientWidth >= 700) {
       if (!visible) {
         hideShowMenu();
@@ -26,9 +32,83 @@ document.addEventListener("DOMContentLoaded", function() {
         hideShowMenu();
       }
     }
-  })
+  });
+
+
+  // const form = document.getElementsByTagName('form')[0];
+  // const email = document.getElementById('mail');
+  // const error = document.querySelector('.error');
+  //
+  // email.addEventListener("input", function(event) {
+  //
+  //   if (email.validity.valid) {
+  //
+  //     error.innerHTML = "";
+  //     error.className = "error";
+  //   }
+  // }, false);
+  //
+  // form.addEventListener("submit", function(event) {
+  //
+  //   if (!email.validity.valid) {
+  //     error.innerHTML = "I expect an e-mail.";
+  //     error.className = "error active";
+  //     event.preventDefault();
+  //   }
+  // }, false);
 
 });
+
+function validateMyForm() {
+  const form = document.getElementsByTagName('form')[0];
+  const email = document.getElementById('mail');
+  const error = document.querySelector('.error');
+  const name = document.getElementById("name");
+  const message = document.getElementById('msg');
+
+  var emailValue = email.value;
+  //https://stackoverflow.com/a/32686261/4673960
+  var result = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
+  console.log(result);
+
+
+  var nameValue = name.value;
+  var nameOK = nameValue.length >= 2;
+
+  var msgValue = message.value;
+  var mssgOK = msgValue.length >= 10;
+
+
+  if (result && nameOK && mssgOK) {
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://naivist.net/form");
+    xhr.onload = function(event) {
+      alert("Success, server responded with: " + event.target.response); // raw response
+
+
+      document.getElementById('response_placeholder').innerHTML = event.target.response;
+    };
+    // or onerror, onabort
+    var formData = new FormData(document.getElementById("form"));
+    xhr.send(formData);
+
+  }
+
+
+
+  // if (!email.validity.valid){
+  //   error.innerHTML = "I expect an e-mail.";
+  //   error.className = "error active";
+  // } else {
+  //
+  //
+  //     error.innerHTML = "";
+  //     error.className = "error";
+  //
+  // }
+
+}
 
 
 function hideShowMenu() {
