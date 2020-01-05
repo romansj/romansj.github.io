@@ -11,7 +11,7 @@
   </header>
 
 
-  <section id="about" class="text-center">
+  <!-- <section id="about" class="text-center">
     <div class="bg-overlay">
 
       <div class="text_div">
@@ -22,31 +22,79 @@
 
       <div class="social">
 
-        <div class="social-btns" >
-          <div><a style="text-decoration: none;  display:flex; flex-direction:column; color:black;" target="_blank" href="https://play.google.com/store/apps/details?id=com.cherrydev.silenttime"><img src="images/icons/silent_time.png" alt="Silent Time">Silent<br>Time</a></div>
+        <div class="social-btns">
+          <div><a style="text-decoration: none;  display:flex; flex-direction:column; color:black;" target="_blank" href="https://play.google.com/store/apps/details?id=com.cherrydev.silenttime"><img src="images/icons/silent_time.png"
+                alt="Silent Time">Silent<br>Time</a></div>
           <p style="text-align:left; margin-left: 15px; max-width:500px;">Silent Time makes sure your phone stays quiet when you need it to, be it at work - in a meeting, school - during class or when you're walking outside.
             Silent Time makes sure you're not disturbed wherever you are.</p>
         </div>
       </div>
 
-  </section>
+  </section> -->
 
 
   <section id="contact" class="text-center">
+
+
+
+
+
+    <div id="response_placeholder"></div>
+    <h3 class="upper">Contact Us</h3>
+
+    <div id="about_text">
+      <div class="content_div">
+        <picture id="notes_contact_img">
+          <source srcset="images/typing_dark.png" media="(prefers-color-scheme: dark)" height="300px">
+          <img src="images/typing.png" height="300px">
+        </picture>
+
+        <div class="text_div" >
+          <p>You can use this form to send a message to CherryDev. We'd love to hear your feedback!</p>
+
+          <form id="form" autocomplete="off" onsubmit="event.preventDefault(); validateMyForm();">
+            <div id="error"></div>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name" required />
+
+            <label for="mail">E-mail:</label>
+            <input autocomplete="new-password" type="email" id="mail" name="user_email" required />
+
+            <label for="msg">Message:</label>
+            <textarea style="resize: none;" id="msg" name="user_message" required></textarea>
+
+            <button type="submit">Submit</button>
+
+
+
+          </form>
+        </div>
+
+
+
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <!-- <section id="contact" class="text-center">
     <div class="text_div">
       <h3 class="upper">Contact Us</h3>
       <p>You can use this form to send a message to CherryDev</p>
     </div>
 
-    <h1>😁 Under construction 😁</h1>
-    <form id="form" autocomplete="off" onsubmit="event.preventDefault(); validateMyForm();">
 
+    <form id="form" autocomplete="off" onsubmit="event.preventDefault(); validateMyForm();">
+      <div id="error"></div>
 
       <label for="name">Name:</label>
       <input type="text" id="name" name="user_name" required />
 
       <label for="mail">E-mail:</label>
-      <input  autocomplete="new-password" type="email" id="mail" name="user_email" required/>
+      <input autocomplete="new-password" type="email" id="mail" name="user_email" required />
 
       <label for="msg">Message:</label>
       <textarea style="resize: none;" id="msg" name="user_message" required></textarea>
@@ -58,124 +106,99 @@
     </form>
 
 
-<div id="response_placeholder"></div>
+    <div id="response_placeholder"></div>
+  </section> -->
+
+  <style>
 
 
-    <style>
-      form {
-        /* Center the form on the page */
-        margin: 0 auto;
-        width: 400px;
-        /* Form outline */
-        padding: 1em;
-        border: 1px solid #CCC;
-        border-radius: 1em;
-      }
+    form ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
-      form ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      form li+li {
-        margin-top: 1em;
-      }
-
-      label {
-        /* Uniform size & alignment */
-        display: inline-block;
-        width: 90px;
-        text-align: right;
-      }
-
-      input,
-      textarea {
-        /* To make sure that all text fields have the same font settings
-           By default, textareas have a monospace font */
-        font: 1em sans-serif;
-
-        /* Uniform text field size */
-        width: 300px;
-        box-sizing: border-box;
-
-        /* Match form field borders */
-        border: 1px solid #999;
-      }
-
-      input:focus,
-      textarea:focus {
-        /* Additional highlight for focused elements */
-        border-color: #000;
-      }
-
-      textarea {
-        /* Align multiline text fields with their labels */
-        vertical-align: top;
-
-        /* Provide space to type some text */
-        height: 5em;
-      }
-
-      .button {
-        /* Align buttons with the text fields */
-        /* padding-left: 90px; */
-        /* same size as the label elements */
-      }
+    form li+li {
+      margin-top: 1em;
+    }
 
 
 
-      button {
-        /* This extra margin represent roughly the same space as the space
+
+
+    input:focus,
+    textarea:focus {
+      /* Additional highlight for focused elements */
+      border-color: #000;
+    }
+
+    textarea {
+      /* Align multiline text fields with their labels */
+      vertical-align: top;
+
+      /* Provide space to type some text */
+      height: 5em;
+    }
+
+    .button {
+      /* Align buttons with the text fields */
+      /* padding-left: 90px; */
+      /* same size as the label elements */
+    }
+
+
+
+    button {
+      /* This extra margin represent roughly the same space as the space
                    between the labels and their text fields */
-        margin-left: .5em;
+      margin-left: .5em;
 
-        display: inline-block;
-        border: none;
-        padding: 1rem 2rem;
-        margin: 0;
-        text-decoration: none;
-        background: #ef6c00;
-        color: #ffffff;
-        font-family: sans-serif;
-        font-size: 1rem;
-        cursor: pointer;
-        text-align: center;
-        transition: background 250ms ease-in-out,
-          transform 150ms ease;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-      }
+      display: inline-block;
+      border: none;
+      padding: 1rem 2rem;
+      margin: 0;
+      text-decoration: none;
+      background: #ef6c00;
+      color: #ffffff;
+      font-family: sans-serif;
+      font-size: 1rem;
+      cursor: pointer;
+      text-align: center;
+      transition: background 250ms ease-in-out,
+        transform 150ms ease;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
 
-      button:hover,
-      button:focus {
-        background: #c25700;
-      }
+    button:hover,
+    button:focus {
+      background: #c25700;
+    }
 
-      button:focus {
-        /* outline: 1px solid #fff;
+    button:focus {
+      /* outline: 1px solid #fff;
             outline-offset: -4px; */
-      }
+    }
 
-      button:active {
-        transform: scale(0.95);
-      }
+    button:active {
+      transform: scale(0.95);
+    }
 
-      input[type=email] {
-        -webkit-appearance: none;
+    input[type=email] {
+      -webkit-appearance: none;
 
-        /* width: 100%; */
-        border: 1px solid #333;
-        margin: 0;
+      /* width: 100%; */
+      border: 1px solid #333;
+      margin: 0;
 
-        font-family: inherit;
-        font-size: 90%;
+      font-family: inherit;
+      font-size: 90%;
 
-        box-sizing: border-box;
-      }
+      box-sizing: border-box;
+    }
 
-      /* This is our style for the invalid fields */
-      /* input:invalid {
+    /* This is our style for the invalid fields */
+    /* input:invalid {
         border-color: #900;
         background-color: #FDD;
       }
@@ -184,8 +207,8 @@
         outline: none;
       } */
 
-      /* This is the style of our error messages */
-      /* .error {
+    /* This is the style of our error messages */
+    /* .error {
         width: 100%;
         padding: 0;
 
@@ -200,9 +223,9 @@
       .error.active {
         padding: 0.3em;
       } */
-    </style>
+  </style>
 
 
-  </section>
+
 
 </div>

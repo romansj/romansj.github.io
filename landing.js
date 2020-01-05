@@ -67,59 +67,74 @@ function validateMyForm() {
   const message = document.getElementById('msg');
 
   var emailValue = email.value;
-  //https://stackoverflow.com/a/32686261/4673960
-  var result = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
-  console.log(result);
-
-
   var nameValue = name.value;
-  var nameOK = nameValue.length >= 2;
-
   var msgValue = message.value;
+
+  //https://stackoverflow.com/a/32686261/4673960
+  var emailOK = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
+  var nameOK = nameValue.length >= 2;
   var mssgOK = msgValue.length >= 10;
 
 
-  if (result && nameOK && mssgOK) {
+  if (emailOK && nameOK && mssgOK) {
+    if (document.getElementById('error_name')) {
+      document.getElementById('error_name').style.display = "none";
+    }
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://naivist.net/form");
-    xhr.onload = function(event) {
-      alert("Success, server responded with: " + event.target.response); // raw response
+    alert("Success, message sent!")
 
-
-      document.getElementById('response_placeholder').innerHTML = event.target.response;
-    };
-    // or onerror, onabort
-    var formData = new FormData(document.getElementById("form"));
-    xhr.send(formData);
+    email.value = "";
+    name.value="";
+ message.value="";
+    // var xhr = new XMLHttpRequest();
+    // xhr.open("POST", "http://naivist.net/form");
+    // xhr.onload = function(event) {
+    //   alert("Success, server responded with: " + event.target.response); // raw response
+    //
+    //
+    //   document.getElementById('response_placeholder').innerHTML = event.target.response;
+    // };
+    // // or onerror, onabort
+    // var formData = new FormData(document.getElementById("form"));
+    // xhr.send(formData);
 
   } else {
-var errorMessage;
-if (!result){
 
-}
-    if (!mssgOK){
+    var errorMessage = "";
 
+    if (!nameOK) {
+      errorMessage += "Please enter your name";
     }
-    if (!nameOK){
 
+    if (!emailOK) {
+      if (errorMessage.length > 0) errorMessage += "\n";
+      errorMessage += "Please enter a valid email address";
     }
-        alert()
+
+    if (!mssgOK) {
+      if (errorMessage.length > 0) errorMessage += "<br>";
+      errorMessage += "Your message should be at least 10 characters long";
+    }
+
+    showError(errorMessage);
   }
 
+}
 
 
-  // if (!email.validity.valid){
-  //   error.innerHTML = "I expect an e-mail.";
-  //   error.className = "error active";
-  // } else {
-  //
-  //
-  //     error.innerHTML = "";
-  //     error.className = "error";
-  //
-  // }
+function showError(text) {
+  var errorDiv = document.getElementById('error');
+  var errorP = document.getElementById('error_name')
 
+  if (errorP) {
+    errorP.style.display = "block";
+    errorP.innerHTML = text;
+  } else {
+    var newP = document.createElement('p');
+    var g = errorDiv.appendChild(newP);
+    g.innerHTML = text;
+    g.id = 'error_name';
+  }
 }
 
 
