@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   window.addEventListener("resize", function(event) {
-    //console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight + ' high');
+    console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight + ' high');
     if (document.body.clientWidth >= 700) {
       if (!visible) {
         hideShowMenu();

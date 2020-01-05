@@ -59,7 +59,7 @@
             <input type="text" id="name" name="user_name" required />
 
             <label for="mail">E-mail:</label>
-            <input autocomplete="new-password" type="email" id="mail" name="user_email" required />
+            <input type="email" id="mail" name="user_email" required />
 
             <label for="msg">Message:</label>
             <textarea style="resize: none;" id="msg" name="user_message" required></textarea>
@@ -125,12 +125,11 @@
 
 
 
-
-    input:focus,
+/* Additional highlight for focused elements */
+    /* input:focus,
     textarea:focus {
-      /* Additional highlight for focused elements */
       border-color: #000;
-    }
+    } */
 
     textarea {
       /* Align multiline text fields with their labels */
@@ -184,10 +183,10 @@
       transform: scale(0.95);
     }
 
-    input[type=email] {
+    /* input[type=email] {
       -webkit-appearance: none;
 
-      /* width: 100%; */
+
       border: 1px solid #333;
       margin: 0;
 
@@ -195,7 +194,7 @@
       font-size: 90%;
 
       box-sizing: border-box;
-    }
+    } */
 
     /* This is our style for the invalid fields */
     /* input:invalid {
