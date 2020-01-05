@@ -93,6 +93,18 @@ function validateMyForm() {
     var formData = new FormData(document.getElementById("form"));
     xhr.send(formData);
 
+  } else {
+var errorMessage;
+if (!result){
+
+}
+    if (!mssgOK){
+
+    }
+    if (!nameOK){
+
+    }
+        alert()
   }
 
 

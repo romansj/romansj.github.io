@@ -185,6 +185,19 @@ section {
   margin-top: 60px;
 }
 
+section#about div.text_div {
+  text-align: left;
+}
+
+section#about div.social div.social-btns {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #292929;
@@ -270,9 +283,11 @@ section {
     /* text-align: center; */
   }
 
+
+
   section {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-top: 60px;
   }
 
