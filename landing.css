@@ -206,7 +206,6 @@ form {
   /* Form outline */
   padding: 1em;
   border: 1px solid #CCC;
-  align-self: center;
   /* border-radius: 1em; */
 }
 
@@ -239,6 +238,11 @@ label {
   section#contact div.content_div p {
     text-align: center;
   }
+
+  form {
+    /* background-color: lightgreen; */
+    align-self: center;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -250,6 +254,7 @@ label {
 @media screen and (max-width: 500px) {
   form {
     width: 100%;
+    align-self: center;
   }
 
   input,
@@ -286,14 +291,13 @@ div#error p {
 }
 
 @media (prefers-color-scheme: dark) {
-form {
-      border: 1px solid #4a4a4a;
-}
-
+  form {
+    border: 1px solid #4a4a4a;
+  }
 
   input,
   textarea {
-      border: 1px solid #4a4a4a;
+    border: 1px solid #4a4a4a;
     background-color: #3b3b3b;
     color: #ccc;
   }
@@ -434,11 +438,7 @@ form {
     margin-right: 0px;
     margin-bottom: 0px;
   }
-
 }
-
-
-
 
 #swipe_actions_container {
   display: flex;
@@ -490,7 +490,6 @@ li a:hover {
   position: relative;
   margin: 10px;
 } */
-
 .btn {
   background-color: rgba(242, 213, 26, 0.8);
   border-radius: 32px;
@@ -549,7 +548,6 @@ footer p {
 footer li a:hover {
   color: #ef6c00;
 }
-
 
 h3 {
   color: black;

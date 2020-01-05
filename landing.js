@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   window.addEventListener("resize", function(event) {
-    console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight + ' high');
+    // console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight + ' high');
     if (document.body.clientWidth >= 700) {
       if (!visible) {
         hideShowMenu();
@@ -33,29 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
   });
-
-
-  // const form = document.getElementsByTagName('form')[0];
-  // const email = document.getElementById('mail');
-  // const error = document.querySelector('.error');
-  //
-  // email.addEventListener("input", function(event) {
-  //
-  //   if (email.validity.valid) {
-  //
-  //     error.innerHTML = "";
-  //     error.className = "error";
-  //   }
-  // }, false);
-  //
-  // form.addEventListener("submit", function(event) {
-  //
-  //   if (!email.validity.valid) {
-  //     error.innerHTML = "I expect an e-mail.";
-  //     error.className = "error active";
-  //     event.preventDefault();
-  //   }
-  // }, false);
 
 });
 
@@ -84,8 +61,8 @@ function validateMyForm() {
     alert("Success, message sent!")
 
     email.value = "";
-    name.value="";
- message.value="";
+    name.value = "";
+    message.value = "";
     // var xhr = new XMLHttpRequest();
     // xhr.open("POST", "http://naivist.net/form");
     // xhr.onload = function(event) {
