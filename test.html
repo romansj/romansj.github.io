@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Notes app</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" type="image/x-icon" href="images/icons/notes.png" />
+  <!-- <link rel="stylesheet" href="reset.css" /> -->
+  <link rel="stylesheet" href="landing.css" />
+  <script src="test.js"></script>
+
+
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/css/foundation.min.css" integrity="sha256-GSio8qamaXapM8Fq9JYdGNTvk/dgs+cMLgPeevOYEx0= sha384-wAweiGTn38CY2DSwAaEffed6iMeflc0FMiuptanbN4J+ib+342gKGpvYRWubPd/+ sha512-QHEb6jOC8SaGTmYmGU19u2FhIfeG+t/hSacIWPpDzOp5yygnthL3JwnilM7LM1dOAbJv62R+/FICfsrKUqv4Gg==" crossorigin="anonymous"> -->
+
+</head>
+
+<body>
+
+  <div id="navbar">
+
+    <nav id="top-menu" class="menu">
+      <ul class="parent-menu" id="parent-menu-id">
+        <li class="upper-menu menu-icon" id="icon_item"><img src="images/icons/notes.png" style="width:40px;"  alt="Notes app logo"/></li>
+        <li class="upper-menu menu-text"><a id="home" href="javascript:void(0)">Notes</a></li>
+        <li class="upper-menu menu-text"><a id="home_about" href="javascript:void(0)">About</a></li>
+        <li class="upper-menu menu-text"><a id="home_features" href="javascript:void(0)">Features</a></li>
+        <li class="upper-menu menu-text"><a id="community_nav" href="javascript:void(0)">Community</a></li>
+        <li class="upper-menu menu-text"><a id="download_nav" href="javascript:void(0)">Download</a></li>
+        <!-- <li class="upper-menu menu-text"><a href="editor/editor.html">Online Editor</a></li> -->
+      </ul>
+    </nav>
+
+
+  </div>
+
+  <div id="page_content">
+
+    <div id="content_placeholder"></div>
+
+    <div id="community_placeholder"></div>
+
+    <div id="download_placeholder"></div>
+
+<<section>
+  <form id="form" autocomplete="off" action="http://naivist.net/form" method="post">
+    <div id="error"></div>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name" required />
+
+    <label for="mail">E-mail:</label>
+    <input type="email" id="mail" name="user_email" required />
+
+    <label for="msg">Message:</label>
+    <textarea style="resize: none;" id="msg" name="user_message" required></textarea>
+
+    <button type="submit">Submit</button>
+
+
+
+  </form>
+</section>
+
+
+
+    <hr>
+    <section>
+      <footer class="text-center">
+
+        <ul>
+          <li><a id="pp" href="javascript:void(0)">Privacy Policy</a></li>
+          <li><a id="legal" href="javascript:void(0)">Legal</a></li>
+          <li><a id="about" href="javascript:void(0)">About Us</a></li>
+
+        </ul>
+
+        <br>
+
+        <p>All trademarks belong to their respective owners.</p>
+        <p>Google Play and the Google Play logo are trademarks of Google LLC.</p>
+        <p>Copyright (c) 2020 CherryDev. All Rights Reserved.</p>
+      </footer>
+    </section>
+
+  </div>
+
+</body>
+
+</html>

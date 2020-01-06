@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
 
+
+
+
   window.addEventListener("resize", function(event) {
     // console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight + ' high');
     if (document.body.clientWidth >= 700) {
@@ -35,6 +38,10 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 });
+
+
+
+
 
 function validateMyForm() {
   const form = document.getElementsByTagName('form')[0];
@@ -58,11 +65,24 @@ function validateMyForm() {
       document.getElementById('error_name').style.display = "none";
     }
 
+
+    form.action = "http://naivist.net/form";
+    form.submit();
+
+
     alert("Success, message sent!")
 
     email.value = "";
     name.value = "";
     message.value = "";
+
+
+
+
+
+
+    // form.onsubmit = "event.preventDefault(); validateMyForm();";
+
     // var xhr = new XMLHttpRequest();
     // xhr.open("POST", "http://naivist.net/form");
     // xhr.onload = function(event) {
