@@ -66,8 +66,8 @@ function validateMyForm() {
     }
 
 
-    form.action = "http://naivist.net/form";
-    form.submit();
+    // form.action = "http://naivist.net/form";
+    // form.submit();
 
 
     alert("Success, message sent!")
