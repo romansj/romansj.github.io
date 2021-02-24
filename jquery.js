@@ -52,18 +52,18 @@ $(document).ready(function() {
 
 
   $("#pp").click(function() {
-    loadLegal();
     scrollToTop();
+    loadLegal();
   });
 
   $("#legal").click(function() {
-    loadLegal();
     scrollToTop();
+    loadLegal();
   });
 
   $("#about").click(function() {
-    loadAboutCherry();
     scrollToTop();
+    loadAboutCherry();
   });
 
 
