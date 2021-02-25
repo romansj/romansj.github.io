@@ -16,7 +16,7 @@ header {
   display: block;
   background:
     linear-gradient(rgba(14, 2, 35, 0.5), rgba(14, 2, 35, 0.5)),
-    url("images/unsplash_man_w_phone.jpg");
+    url("images/unsplash_man_w_phone.webp");
   /* https://unsplash.com/photos/J2e34-1CVVs */
   background-position: bottom;
   background-repeat: no-repeat;
@@ -31,7 +31,7 @@ header#about_header {
   display: block;
   background:
     linear-gradient(rgba(14, 2, 35, 0.5), rgba(14, 2, 35, 0.5)),
-    url("images/programmer.jpg");
+    url("images/programmer.webp");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,7 +45,7 @@ header#legal_header {
   display: block;
   background:
     linear-gradient(rgba(14, 2, 35, 0.5), rgba(14, 2, 35, 0.5)),
-    url("images/writing.jpg");
+    url("images/writing.webp");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
